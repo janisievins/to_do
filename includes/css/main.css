@@ -1,0 +1,560 @@
+/**********************************************************************************************************
+ FONTS
+**********************************************************************************************************/
+
+/* Lobster */
+@font-face {
+    font-family: 'Lobster';
+    src: url('../fonts/Lobster-Regular-webfont.eot');
+    src: url('../fonts/Lobster-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lobster-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Lobster-Regular-webfont.woff') format('woff'),
+         url('../fonts/Lobster-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Lobster-Regular-webfont.svg#lobsterregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Marck Script */
+@font-face {
+    font-family: 'Marck Script';
+    src: url('../fonts/MarckScript-Regular-webfont.eot');
+    src: url('../fonts/MarckScript-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MarckScript-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/MarckScript-Regular-webfont.woff') format('woff'),
+         url('../fonts/MarckScript-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/MarckScript-Regular-webfont.svg#marck_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**********************************************************************************************************
+ GLOBAL CSS
+**********************************************************************************************************/
+html { 
+    background: url(../img/wood.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.padding0 {
+    padding:0px;
+}
+
+.marginb0 {
+    margin-bottom:0px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  Info button
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media (min-width: 900px) {
+.info-box {
+    position:fixed;
+    right:0;
+    top: 50px;
+    background: rgba(255,0,0,0.5);
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    margin-right: -140px;
+    transition: all 0.6s;
+    cursor:pointer;
+    display:none;
+}
+
+.info-box:hover {
+    margin-right:0px;
+    background: rgba(255,0,0,0.7);
+}
+
+.info-button {
+    margin:10px;
+}
+
+.overlay {
+    font-size: 24px;
+    font-family: 'Lobster';
+    padding-right: 10px;
+}
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  Info dialog
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.dialog-info p {
+    font-family: sans-serif;
+    text-shadow: none;
+    color:grey;
+}
+
+.first-par {
+    border-bottom:1px solid #E0E0E0;
+    color: rgb(64,64,64) !important;
+    padding-bottom: 10px;
+}
+
+.dialog-info ol {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #404040;
+    text-shadow: none;
+    text-align: left;
+    padding-left:20px;
+}
+
+.dialog-info ol ul {
+    padding-left:20px;
+}
+
+
+.dialog-info img {
+    height: 14px;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  No JavaScript box
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.no-js {
+    display: none;
+    margin: 80px 0px 100px 0px;
+    text-align: center;
+    font-family: 'Marck Script';
+    text-shadow: 1px 1px rgba(42, 128, 239, 0.5);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  Main title
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.title {
+    text-align: center;
+    text-shadow: 2px 2px rgba(255, 0, 0, 0.5);
+    font-family: 'Lobster';
+}
+
+.title h1 {
+    margin-top: 0px;
+    margin-bottom:50px;
+    font-size: 100px;
+}
+
+.title h2{
+    font-size: 80px;
+    margin-bottom: 0px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  Main box
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.main-box {
+    margin-top: 50px;
+    margin-bottom:40px;
+    position: relative;
+    background: rgba(255,255,255,0.95);
+    padding: 50px 20px 40px 10px;
+    border-radius: 10px;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  The (+) button
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.main-box-add {
+    position: absolute;
+    background: rgba(51,51,51,0.9);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    top: -50px;
+    left: 47%;
+    margin-left: -30px;
+}
+
+.main-box-add:hover {
+    cursor:pointer;
+    background-color: rgba(51,51,51,1);
+}
+
+.main-box-add:hover i {
+    color: rgb(229, 64, 64);
+}
+
+.main-box-add i{
+    color: #FFF;
+    padding-top:31px;
+}
+    
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  Input form
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.important-form {
+  background: repeating-linear-gradient(
+    -55deg,
+    rgb(253, 229, 229),
+    rgb(253, 229, 229) 10px,
+    rgb(255, 215, 215) 10px,
+    rgb(255, 215, 215) 20px
+  ) !important;
+}
+
+.normal-form {
+  background: repeating-linear-gradient(
+    -55deg,
+    rgb(253, 254, 224),
+    rgb(253, 254, 224) 10px,
+    rgb(255, 255, 200) 10px,
+    rgb(255, 255, 200) 20px
+  ) !important;
+}
+
+#new-task-title {
+    font-family: 'Lobster';
+    text-shadow: 1px 1px rgba(42, 128, 239, 0.5);
+    text-align: center;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+#form {
+    margin-bottom: 46px;
+    padding: 20px 20px 10px 10px; 
+    -o-transform:none;
+    -webkit-transform:none;
+    -moz-transform:none;
+}
+
+label {
+    color:rgba(255,0,0,0.7);
+    font-family: 'Lobster';
+    font-size: 16px;
+    padding-left:20px;
+    font-weight:lighter;
+    float:right;
+    padding-right:10px;
+}
+
+/* Title input */
+.title-input {
+    width: 100%;
+    padding-bottom:10px;
+    border: none;
+    font-size: 25px;
+    background: transparent;
+    border-bottom: 1px dotted #C0C0C0;
+}
+
+#title {
+    line-height: 30px;
+    color: #000000;
+    padding-bottom:0px;
+    padding-left:20px;
+    font-family: 'Marck Script';
+}
+
+.title-input::-webkit-input-placeholder {
+    color: #404040;
+    font-size: 25px;
+    font-family: 'Marck Script';
+}
+
+/* Details input */
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.details-input {
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    background: transparent;
+    border-bottom: 1px dotted #C0C0C0;
+}
+
+#details {
+    line-height: 2em;
+    padding-bottom:0px;
+    padding-left:20px;
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Marck Script';
+}
+
+.details-input::-webkit-input-placeholder {
+    color: #404040;
+    font-size: 20px;
+    font-family: 'Marck Script';
+}
+
+/* Submit button */
+.form-buttons {
+    padding-top:30px;
+}
+.form-btn {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.form-btn i{
+    color: #FFF;
+    padding-top:0px;
+    padding-right:20px;
+    margin-left: -6px;
+    margin-top: 8px;
+}
+
+#submit-btn {
+    background: rgba(51,51,51,0.9);
+    margin-right: 10px;
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+    background-color: rgba(51,51,51,1);
+}
+
+#submit-btn:hover i {
+    color: rgb(229, 64, 64);
+}
+
+/* Star button */
+#star {
+    padding: 5px 0px 10px 20px;
+}
+
+.yellow {
+    color: #FFF000;
+}
+
+#star:hover {
+    cursor: pointer;    
+}
+
+#mark-important {
+    padding-left:0px;
+    padding-top:4px;
+}
+
+#mark-important p{
+    font-size: 18px;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  Tasks list
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.empty {
+  margin: 80px 0px 100px 30px;
+  text-align: center;
+  font-family: 'Marck Script';
+  text-shadow: 1px 1px rgba(42, 128, 239, 0.5);
+  
+}
+
+/* Delete button */
+.delete-task {
+    color:rgb(229, 64, 64);
+    margin-top: -30px;
+}
+
+.delete-task:hover {
+    cursor:pointer;
+    color: #F53F3F;
+}
+
+/* Mark as done button */
+.done-task {
+    color:rgb(64, 230, 103);
+    margin-right: 22px;
+    margin-top: -30px;
+}
+
+.done-task:hover {
+    cursor:pointer;
+    color: #33FF63;
+}
+
+
+
+.item-list {
+    list-style-type: none;
+    padding-left:0px;
+    padding-right:24px;
+}
+
+.items-inner li h3{
+    word-wrap: break-word;
+    border-bottom: 1px dotted #C0C0C0;
+    padding: 0px 10px 5px 25px;
+    font-family: 'Marck Script';
+}
+
+.items-inner p{
+    word-wrap: break-word;
+    padding: 0px 10px 0px 10px;
+    font-family: 'Marck Script';
+    font-size: 20px;
+}
+
+.items-inner > ul{
+    overflow:hidden;
+}
+
+.items-inner li{
+  background:rgb(253, 254, 224);
+  width:100%;
+  -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+.items-inner li:hover {
+    background: rgb(252, 254, 203);
+}
+    
+.items-inner > ul li{
+  float:left;
+  margin:1em;
+}
+
+.items-inner ul li:first-child{
+    -o-transform:rotate(0.5deg);
+    -webkit-transform:rotate(0.5deg);
+    -moz-transform:rotate(0.5deg);
+    position:relative;
+}
+
+.items-inner ul li:nth-child(even){
+    -o-transform:rotate(0.5deg);
+    -webkit-transform:rotate(0.5deg);
+    -moz-transform:rotate(0.5deg);
+    position:relative;
+}
+
+.items-inner ul li:nth-child(3n){
+    -o-transform:rotate(-0.5deg);
+    -webkit-transform:rotate(-0.5deg);
+    -moz-transform:rotate(-0.5deg);
+    position:relative;
+}
+
+.items-inner ul li:nth-child(5n){
+    -o-transform:rotate(0.5deg);
+    -webkit-transform:rotate(0.5deg);
+    -moz-transform:rotate(0.5deg);
+    position:relative;
+}
+
+/* Done tasks */
+.done {
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+    background: white !important;
+    text-decoration: line-through;
+}
+
+.done:hover {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+    background: white !important;
+    text-decoration: none;
+}
+
+.done .done-task {
+    display: none;
+}
+
+/* Important tasks */
+.important {
+    background: rgb(255, 236, 236)!important;
+}
+
+.important h3 {
+    border-bottom: 1px dotted black !important;
+}
+
+.important:hover {
+    background: rgb(255, 223, 223) !important;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  Dialog popups
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ui-dialog { width:600px !important;}
+.dialog-delete, .dialog-done, .dialog-info {
+    display:none;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*  Mobile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media (max-width: 768px) {
+    .main-box { border-radius: 0px; }
+    #mark-important { display: none; }
+    #star { margin-left:20px; font-size: 20px; padding-top: 0px; }
+    .ui-dialog { width:550px !important; }
+}
+  
+@media (max-width: 600px) {
+    .main-box { margin-bottom: 0px; padding: 70px 0px 50px 0px; }
+    .title h1 { font-size: 70px; }
+    .title h2 { font-size: 50px; }
+    .empty { margin: 80px 0px 100px 0px; }
+    .item-list { padding: 0px; }
+    #form { margin-left: 0px; margin-top: 0px; }
+    .items-inner > ul li { margin-bottom: 2em; margin-left:0px; }
+    .ui-dialog { width:500px !important; }
+}
+
+@media (min-width: 600px) {
+ .items-inner > ul li { margin: 1em; }
+}
+
+@media (max-width: 900px) {
+.info-box {
+    position:fixed;
+    top: -10px;
+    position:relative;
+    margin-left:78%;
+    cursor:pointer;
+    display:none;
+}
+
+.info-box p:hover {
+    background: rgba(255,0,0,0.7);
+    transition: all 0.5s;
+}
+
+.info-box p {
+    font-size: 22px;
+    width:58px;
+    background: rgba(255,0,0,0.5);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.info-button {
+    margin:10px;
+}
+
+.overlay {
+    display: none;
+}
+
+}
